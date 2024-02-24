@@ -24,4 +24,7 @@ public class Elements {
     public WebElement getCustomersTabButton() {
         return customersTabButton;
     }
+    public WebElement getAddCustomerTabButton() {
+        return addCustomerTabButton;
+    }
 }
