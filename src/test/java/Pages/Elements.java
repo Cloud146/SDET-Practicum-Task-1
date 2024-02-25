@@ -12,13 +12,14 @@ public class Elements {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    @FindBy(css = "body > div > div > div.ng-scope > div > div.center > button.btn.btn-lg.tab.btn-primary")
+
+    @FindBy(css = "button[ng-click=\"addCust()\"]\n")
     public WebElement addCustomerTabButton;
-    @FindBy(css = "body > div > div > div.ng-scope > div > div.center > button:nth-child(2)")
+    @FindBy(css = "button[ng-click=\"openAccount()\"]\n")
     private WebElement openAccountTabButton;
-    @FindBy(css = "body > div > div > div.ng-scope > div > div.center > button:nth-child(3)")
+    @FindBy(css = "button[ng-click=\"showCust()\"]\n")
     public WebElement customersTabButton;
-    @FindBy(css = "body > div > div > div.box.mainhdr > button.btn.home")
+    @FindBy(css = "button[ng-click=\"home()\"]\n")
     private WebElement homeButton;
 
     public WebElement getCustomersTabButton() {

@@ -1,30 +1,32 @@
 package Tests.CustomersPage;
 
 import Pages.CustomersPage;
-import Pages.InputData;
-import Tests.Setup;
+import Helpers.InputData;
+import Tests.BaseTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Epic("SDET_Practice")
 @Feature("Sorting Costumers")
 @DisplayName("Тест-кейс № 02. \"Сортировка клиентов по имени (First Name)\"")
-public class TestCase02 {
-    private WebDriver driver = new ChromeDriver(new ChromeOptions().addArguments("--disable-infobars"));
+public class TestCase02 extends BaseTest {
+    private WebDriver driver;
     private CustomersPage customersPage;
-    Setup setup = new Setup(driver);
     InputData inputData = new InputData();
 
-    @Description("Открытие браузера с соответствующими настройками")
+    @Description("Открытие начальной страницы теста")
     @BeforeEach
     public void setup(){
-        setup.open(inputData.customersPageURL);
+        driver = getDriver();
+        driver.get(inputData.customersPageURL);
         customersPage = new CustomersPage(driver);
     }
 
@@ -42,11 +44,5 @@ public class TestCase02 {
     public void descSortByFirstNameTest(){
         customersPage.tableDescSortBy(customersPage.getFirstNameSortingButton());
         assertEquals("Ron Weasly E55555 1007 1008 1009 Delete", customersPage.getFirstCellText());
-    }
-
-    @Description("Закрытие браузера")
-    @AfterEach
-    public void after(){
-        driver.quit();
     }
 }
