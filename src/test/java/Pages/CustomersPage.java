@@ -18,14 +18,15 @@ public class CustomersPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = "body > div > div > div.ng-scope > div > div.ng-scope > div > div > table")
-    private WebElement customersTable;
-    @FindBy(css = "body > div > div > div.ng-scope > div > div.ng-scope > div > div > table > thead > tr > td:nth-child(1) > a")
+    @FindBy(css = "table.table-bordered.table-striped")
+    public WebElement customersTable;
+    @FindBy(css = "a[ng-click=\"sortType = 'fName'; sortReverse = !sortReverse\"]\n")
     public WebElement firstNameSortingButton;
-    @FindBy(css = "body > div > div > div.ng-scope > div > div.ng-scope > div > div > table > thead > tr > td:nth-child(2) > a")
+    @FindBy(css = "a[ng-click=\"sortType = 'lName'; sortReverse = !sortReverse\"]\n")
     public WebElement lastNameSortingButton;
-    @FindBy(css = "body > div > div > div.ng-scope > div > div.ng-scope > div > div > table > thead > tr > td:nth-child(3) > a")
+    @FindBy(css = "a[ng-click=\"sortType = 'postCd'; sortReverse = !sortReverse\"]\n")
     public WebElement postCodeSortingButton;
+
 
     public WebElement getFirstNameSortingButton() {
         return firstNameSortingButton;
@@ -98,9 +99,32 @@ public class CustomersPage {
     }
 
     public CustomersPage deleteCustomer(String customerFirstName){
-        int indexOfCustomer = findIndex(customerFirstName)+1;
-        WebElement customerDeleteButton = driver.findElement(By.cssSelector("body > div > div > div.ng-scope > div > div.ng-scope > div > div > table > tbody > tr:nth-child("+indexOfCustomer+") > td:nth-child(5) > button"));
+        int indexOfCustomer = findIndex(customerFirstName) + 1;
+        String deleteButtonOfRowLocator = "//table//tbody//tr[position() = " + indexOfCustomer + "]//td[last()]//button";
+        WebElement customerDeleteButton  = driver.findElement(By.xpath(deleteButtonOfRowLocator));
         customerDeleteButton.click();
         return this;
+    }
+
+
+    public List<WebElement> tableList(){
+        return customersTable.findElements(By.tagName("tr"));
+    }
+
+    public String getTableDataAsString() {
+        StringBuilder tableData = new StringBuilder();
+        List<WebElement> rows = customersTable.findElements(By.tagName("tr"));
+        if (rows.size() > 1) {
+            rows.remove(0);
+        }
+        for (WebElement row : rows) {
+            List<WebElement> cells = row.findElements(By.tagName("td"));
+            for (WebElement cell : cells) {
+                tableData.append(cell.getText()).append(", ");
+            }
+            tableData.deleteCharAt(tableData.length() - 2);
+            tableData.append("\n");
+        }
+        return tableData.toString().trim();
     }
 }

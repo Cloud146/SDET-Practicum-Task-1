@@ -1,6 +1,8 @@
 package Pages;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -15,13 +17,13 @@ public class AddCustomerPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = "body > div > div > div.ng-scope > div > div.ng-scope > div > div > form > div:nth-child(1) > input")
+    @FindBy(css = "input.form-control[ng-model=\"fName\"]\n")
     private WebElement firstNameField;
-    @FindBy(css = "body > div > div > div.ng-scope > div > div.ng-scope > div > div > form > div:nth-child(2) > input")
+    @FindBy(css = "input.form-control[ng-model=\"lName\"]\n")
     private WebElement lastNameField;
-    @FindBy(css = "body > div > div > div.ng-scope > div > div.ng-scope > div > div > form > div:nth-child(3) > input")
+    @FindBy(css = "input.form-control[ng-model=\"postCd\"]\n")
     private WebElement postCodeField;
-    @FindBy(css = "body > div > div > div.ng-scope > div > div.ng-scope > div > div > form > button")
+    @FindBy(css = "button[type=\"submit\"].btn.btn-default\n")
     private WebElement addCustomerButton;
 
     public AddCustomerPage enterFirstName(String firstName){
