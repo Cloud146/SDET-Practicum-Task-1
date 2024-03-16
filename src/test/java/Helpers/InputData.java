@@ -33,4 +33,19 @@ public class InputData {
         }
         return sb.toString();
     }
+
+    public String validAscData = "A_firstName, LastName, postCode, , Delete \n" +
+            "Albus, Dumbledore, E55656, 1010 1011 1012, Delete \n" +
+            "Harry, Potter, E725JB, 1004 1005 1006, Delete \n" +
+            "Hermoine, Granger, E859AB, 1001 1002 1003, Delete \n" +
+            "Neville, Longbottom, E89898, 1013 1014 1015, Delete \n" +
+            "Ron, Weasly, E55555, 1007 1008 1009, Delete \n" +
+            "Z_firstName, LastName, postCode, , Delete";
+    public String validDescData = "Z_firstName, LastName, postCode, , Delete \n" +
+            "Ron, Weasly, E55555, 1007 1008 1009, Delete \n" +
+            "Neville, Longbottom, E89898, 1013 1014 1015, Delete \n" +
+            "Hermoine, Granger, E859AB, 1001 1002 1003, Delete \n" +
+            "Harry, Potter, E725JB, 1004 1005 1006, Delete \n" +
+            "Albus, Dumbledore, E55656, 1010 1011 1012, Delete \n" +
+            "A_firstName, LastName, postCode, , Delete";
 }
