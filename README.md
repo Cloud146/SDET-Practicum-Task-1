@@ -51,7 +51,7 @@ https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager
     * Среднее арифметическое длин – 7.
     * Удаляем имя Neville.
 	
-## Тест-кейсы
+# Тест-кейсы
 
 ## Тест-кейс № 01. "Создание клиента (Add Customer)"
 
@@ -119,9 +119,12 @@ https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager
 
 ### Дополнительные условия
 
- * Получить из таблицы Customers список имен. 
+ * Получить из таблицы Customers список имен.
  * Узнать длину каждого имени, затем найти среднее
 арифметическое получившихся длин и удалить клиента с тем именем, у которого длина будет ближе
 к среднему арифметическому (для Java требуется использовать Stream API).
 * Пример: список имен - Albus, Neville, Voldemort. Длины имен – 5, 7, 9 соответственно.
 Среднее арифметическое длин – 7, удаляем имя Neville.
+
+## Отчёты Allure
+![Screen1]([https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png](https://github.com/Cloud146/SDET-Practicum-Task-1/blob/master/allureScreens/AllureScreen1.JPG)https://github.com/Cloud146/SDET-Practicum-Task-1/blob/master/allureScreens/AllureScreen1.JPG)
