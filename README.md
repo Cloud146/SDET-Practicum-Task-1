@@ -128,3 +128,6 @@ https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager
 
 ## Отчёты Allure
 ![Screen1](https://github.com/Cloud146/SDET-Practicum-Task-1/blob/master/allureScreens/AllureScreen1.JPG)
+
+![Screen2](https://github.com/Cloud146/SDET-Practicum-Task-1/blob/master/allureScreens/AllureScreen2.JPG)
+
