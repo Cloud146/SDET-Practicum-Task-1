@@ -131,3 +131,15 @@ https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager
 
 ![Screen2](https://github.com/Cloud146/SDET-Practicum-Task-1/blob/master/allureScreens/AllureScreen2.JPG)
 
+![Screen3](https://github.com/Cloud146/SDET-Practicum-Task-1/blob/master/allureScreens/AllureScreen3.JPG)
+
+![Screen4](https://github.com/Cloud146/SDET-Practicum-Task-1/blob/master/allureScreens/AllureScreen4.JPG)
+
+![Screen5](https://github.com/Cloud146/SDET-Practicum-Task-1/blob/master/allureScreens/AllureScreen5.JPG)
+
+![Screen6](https://github.com/Cloud146/SDET-Practicum-Task-1/blob/master/allureScreens/AllureScreen6.JPG)
+
+
+
+
+
