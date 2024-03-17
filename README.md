@@ -127,4 +127,4 @@ https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager
 Среднее арифметическое длин – 7, удаляем имя Neville.
 
 ## Отчёты Allure
-![Screen1]([https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png](https://github.com/Cloud146/SDET-Practicum-Task-1/blob/master/allureScreens/AllureScreen1.JPG)https://github.com/Cloud146/SDET-Practicum-Task-1/blob/master/allureScreens/AllureScreen1.JPG)
+![Image alt](https://github.com/Cloud146/SDET-Practicum-Task-1/blob/master/allureScreens/AllureScreen1.JPG)
